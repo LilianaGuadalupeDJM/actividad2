@@ -1,21 +1,35 @@
-// src/Screen/Welcome/index.jsx
-import React from 'react';
-import { useHistory } from 'react-router-dom'; // Importa useHistory para la navegación
+import { useState } from 'react';
+import reactLogo from '../../assets/react.svg';
+import viteLogo from '/vite.svg';
+import './welcome.css';
 
-const Welcome = () => {
-  const history = useHistory();
+function Welcome() {
+  const [count, setCount] = useState(0);
 
-  const goToProfile = () => {
-    history.push('/profile'); // Navega a la ruta '/profile' al hacer clic en el botón
+  const handleMoreAboutMeClick = () => {
+    alert('Aquí puedes poner más información sobre ti.');
   };
 
   return (
-    <div>
-      <h1>Bienvenido</h1>
-      <p>Esta es la pantalla de bienvenida.</p>
-      <button onClick={goToProfile}>Ir a Perfil</button> {/* Agrega un botón para ir a la pantalla de perfil */}
-    </div>
+    <>
+      <h1>App con react</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) )}>
+          información importante 
+        </button>
+
+        <button onClick={handleMoreAboutMeClick}>
+          Más sobre mí
+        </button>
+        <p>
+          Bienvenido a mi app donde podrás consultar temas interesantes
+        </p>
+      </div>
+      <p className="read-the-docs">
+        {/* Puedes agregar más contenido aquí si es necesario */}
+      </p>
+    </>
   );
-};
+}
 
 export default Welcome;
