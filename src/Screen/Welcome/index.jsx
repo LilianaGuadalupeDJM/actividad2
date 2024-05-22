@@ -22,7 +22,7 @@ function Welcome() {
           Más sobre mí
         </button>
         <p>
-          Bienvenido a mi app donde podrás consultar temas interesantes
+          Bienvenido a mi app donde podrás consultar   temas interesantes
         </p>
       </div>
       <p className="read-the-docs">
